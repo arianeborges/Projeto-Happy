@@ -1,0 +1,71 @@
+#page-confirmed {
+	width: 100vw;
+	height: 100vh;
+	background: #37c77f;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#page-confirmed .content-wrapper {
+	position: relative;
+
+	width: 100%;
+	max-width: 990px;
+
+	height: 100%;
+	max-height: 600px;
+
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+
+	background: url("../../images/confirmed.svg") no-repeat 80% center;
+}
+
+#page-confirmed .content-wrapper main {
+	padding-top: 115px;
+	max-width: 400px;
+
+	text-align: center;
+}
+
+#page-confirmed .content-wrapper main h1 {
+	font-size: 76px;
+	font-weight: 800;
+	line-height: 70px;
+}
+
+#page-confirmed .content-wrapper main p {
+	margin-top: 40px;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 34px;
+}
+
+.content-wrapper .return-button {
+	width: 25%;
+	height: 64px;
+	border: 0;
+	cursor: pointer;
+	background: #31b272;
+	border-radius: 20px;
+	color: #ffffff;
+	font-weight: 800;
+
+	text-decoration: none;
+
+	margin-top: 60px;
+	margin-left: 65px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: background-color 0.2s;
+}
+
+.content-wrapper .return-button:hover {
+	background: #3bd689;
+}
