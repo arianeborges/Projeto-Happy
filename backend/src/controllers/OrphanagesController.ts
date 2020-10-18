@@ -37,6 +37,7 @@ export default {
 			instructions,
 			opening_hours,
 			open_on_weekends,
+			whatsapp_number,
 		} = request.body;
 
 		const orphanagesRepository = getRepository(Orphanage);
@@ -53,7 +54,8 @@ export default {
 			about,
 			instructions,
 			opening_hours,
-			open_on_weekends: open_on_weekends === 'true' ,
+			open_on_weekends: open_on_weekends === "true",
+			whatsapp_number,
 			images,
 		};
 
@@ -65,9 +67,10 @@ export default {
 			instructions: Yup.string().required(),
 			opening_hours: Yup.string().required(),
 			open_on_weekends: Yup.boolean().required(),
+			whatsapp_number: Yup.string().required(),
 			images: Yup.array(
 				Yup.object().shape({
-					path: Yup.string().required()
+					path: Yup.string().required(),
 				})
 			),
 		});

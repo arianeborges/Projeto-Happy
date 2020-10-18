@@ -43,6 +43,10 @@ export class createOrphanages1602614371733 implements MigrationInterface {
 						type: "varchar",
 					},
 					{
+						name: "whatsapp_number",
+						type: "string",
+					},
+					{
 						name: "open_on_weekends",
 						type: "boolean",
 						default: false,

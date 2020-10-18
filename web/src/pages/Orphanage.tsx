@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { FiClock, FiInfo } from "react-icons/fi";
 import { Map, Marker, TileLayer } from "react-leaflet";
-
 import "../styles/pages/orphanage.css";
 import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
@@ -17,6 +16,7 @@ interface Orphanage {
 	instructions: string;
 	opening_hours: string;
 	open_on_weekends: string;
+	whatsapp_number: string;
 	images: Array<{
 		id: number;
 		url: string;
@@ -58,7 +58,7 @@ export default function Orphanage() {
 							return (
 								<button
 									key={image.id}
-									className={activeImageIndex === index ? 'active' : '' }
+									className={activeImageIndex === index ? "active" : ""}
 									type="button"
 									onClick={() => {
 										setActiveImageIndex(index);
@@ -132,10 +132,15 @@ export default function Orphanage() {
 							)}
 						</div>
 
-						{/* <button type="button" className="contact-button">
-							<FaWhatsapp size={20} color="#FFF" />
-							Entrar em contato
-						</button> */}
+						<a
+							href={`https://wa.me/${orphanage.whatsapp_number}`}
+							style={{ textDecoration: "none" }}
+						>
+							<button type="button" className="contact-button">
+								<FaWhatsapp size={20} color="#FFF" />
+								Entrar em contato
+							</button>
+						</a>
 					</div>
 				</div>
 			</main>
