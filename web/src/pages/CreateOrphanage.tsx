@@ -8,13 +8,13 @@ import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
 import api from "../services/api";
 
-
 export default function CreateOrphanage() {
 	const history = useHistory();
 	const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
 
 	const [name, setName] = useState("");
 	const [about, setAbout] = useState("");
+	const [whatsapp_number, setWhatsappNumber] = useState("");
 	const [instructions, setInstructions] = useState("");
 	const [opening_hours, setOpeningHours] = useState("");
 	const [open_on_weekends, setOpenOnWeekend] = useState(true);
@@ -52,6 +52,7 @@ export default function CreateOrphanage() {
 		const data = new FormData();
 		data.append("name", name);
 		data.append("about", about);
+		data.append("whatsapp_number", whatsapp_number);
 		data.append("latitude", String(latitude));
 		data.append("longitude", String(longitude));
 		data.append("instructions", instructions);
@@ -64,7 +65,7 @@ export default function CreateOrphanage() {
 		await api.post("orphanages", data);
 		alert("Cadastro realizado com sucesso!");
 
-		history.push('/app');
+		history.push("/app");
 	}
 
 	return (
@@ -113,6 +114,17 @@ export default function CreateOrphanage() {
 								maxLength={300}
 								value={about}
 								onChange={(event) => setAbout(event.target.value)}
+							/>
+						</div>
+
+						<div className="input-block">
+							<label htmlFor="whatsapp_number">
+								Número do Whatsapp <span>Sem símbolos e sem espaço</span>
+							</label>
+							<input
+								id="whatsapp_number"
+								value={whatsapp_number}
+								onChange={(event) => setWhatsappNumber(event.target.value)}
 							/>
 						</div>
 
