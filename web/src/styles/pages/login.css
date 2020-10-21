@@ -1,6 +1,5 @@
 #create-login {
 	display: flex;
-	min-height: 100vh;
 }
 
 #textoH3 {
@@ -8,11 +7,7 @@
 }
 
 #create-login main {
-	position: absolute;
 	width: 40%;
-	height: 100%;
-	right: 0;
-	top: 0px;
 
 	display: flex;
 	flex-direction: column;
@@ -51,6 +46,10 @@ form.form-login .input-block input {
 	padding: 0 16px;
 }
 
+form.form-login .input-block input:focus {
+	border-color: #3cdc8c;
+}
+
 .input-block-remember {
 	display: flex;
 	align-items: center;
@@ -74,8 +73,6 @@ form.form-login .input-block input {
 	width: 24px;
 	height: 24px;
 
-	/* background: #37c77f;
-	border: 2px solid #37c77f; */
 	box-sizing: border-box;
 	border-radius: 8px;
 }
