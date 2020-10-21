@@ -58,14 +58,11 @@ function Login() {
 							<input type="checkbox" className="remember-password" />
 							<label htmlFor="rememberPassword">Lembrar-me</label>
 						</div>
-						<Link to="/" id="forgot-password">
+						<Link to="/password" id="forgot-password">
 							Esqueci minha senha
 						</Link>
 					</div>
 
-					{/* <Link to="/" className="enter-login">
-						Entrar
-					</Link> */}
 					<button className="enter-login" type="submit">
 						Entrar
 					</button>
