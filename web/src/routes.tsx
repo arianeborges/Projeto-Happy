@@ -9,6 +9,7 @@ import OrphanageCreated from "./pages/OrphanageCreated";
 import Login from "./pages/Login";
 import Password from "./pages/Password";
 import RedefinePassword from "./pages/RedefinePassword";
+import Dashboard from "./pages/Dashboard";
 
 function Routes() {
 	return (
@@ -18,6 +19,7 @@ function Routes() {
 				<Route path="/app" component={OrphanegesMap} />
 				<Route path="/login" component={Login} />
 				<Route path="/password" component={Password} />
+				<Route path="/dashboard" component={Dashboard} />
 				<Route path="/redefinepassword" component={RedefinePassword} />
 				<Route path="/orphanages/create" component={CreateOrphanage} />
 				<Route path="/orphanages/:id" component={Orphanage} />

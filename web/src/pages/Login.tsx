@@ -63,9 +63,9 @@ function Login() {
 						</Link>
 					</div>
 
-					<button className="enter-login" type="submit">
+					<Link to="/dashboard" className="enter-login">
 						Entrar
-					</button>
+					</Link>
 				</form>
 			</main>
 		</div>
