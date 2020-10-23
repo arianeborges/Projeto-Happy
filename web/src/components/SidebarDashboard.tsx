@@ -13,16 +13,21 @@ export default function SidebarDashboard() {
 		<div className="sidebar-dashboard">
 			<img src={mapMarkerImg} alt="Happy" />
 
-			<main>
-				<button type="button" id="map-button">
+			<div>
+				<button type="button" className="sidebar-button" id="map-button">
 					<FiMapPin size={24} color="#0089A5" />
 				</button>
-				<button type="button" id="alert-button">
+				<button type="button" className="sidebar-button" id="alert-button">
 					<FiAlertCircle size={24} color="#FFFFFF" />
 				</button>
-			</main>
+			</div>
 			<footer>
-				<button type="button" onClick={goBack}>
+				<button
+					className="sidebar-button"
+					id="power-button"
+					type="button"
+					onClick={goBack}
+				>
 					<FiPower size={24} color="#FFF" />
 				</button>
 			</footer>

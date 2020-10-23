@@ -8,6 +8,7 @@ import mapIcon from "../utils/mapIcon";
 import "../styles/pages/dashboard.css";
 import { FiEdit3, FiTrash } from "react-icons/fi";
 import api from "../services/api";
+import { Link } from "react-router-dom";
 
 interface Orphanage {
 	id: number;
@@ -16,7 +17,12 @@ interface Orphanage {
 	name: string;
 }
 
+// interface OrphanageParams {
+// 	id: string;
+// }
+
 export default function Dashboard() {
+	//const params = useParams<OrphanageParams>();
 	const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 
 	useEffect(() => {
@@ -67,12 +73,17 @@ export default function Dashboard() {
 								<footer className="orphanage-card-footer">
 									<p>{orphanage.name}</p>
 									<div>
-										<button type="button" className="card-button">
+										<Link to="" type="button" className="card-button">
 											<FiEdit3 size={20} color="#15c3d6" />
-										</button>
-										<button type="button" className="card-button">
+										</Link>
+										<Link
+											// to={`${orphanage.id}`}
+											to="/removeorphanage"
+											type="button"
+											className="card-button"
+										>
 											<FiTrash size={20} color="#15c3d6" />
-										</button>
+										</Link>
 									</div>
 								</footer>
 							</div>

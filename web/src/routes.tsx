@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Password from "./pages/Password";
 import RedefinePassword from "./pages/RedefinePassword";
 import Dashboard from "./pages/Dashboard";
+import OrphanageRemoved from "./pages/OrphanageRemoved";
 
 function Routes() {
 	return (
@@ -20,6 +21,7 @@ function Routes() {
 				<Route path="/login" component={Login} />
 				<Route path="/password" component={Password} />
 				<Route path="/dashboard" component={Dashboard} />
+				<Route path="/removeorphanage" component={OrphanageRemoved} />
 				<Route path="/redefinepassword" component={RedefinePassword} />
 				<Route path="/orphanages/create" component={CreateOrphanage} />
 				<Route path="/orphanages/:id" component={Orphanage} />
